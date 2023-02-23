@@ -1,0 +1,71 @@
+:root {
+  --gradation: linear-gradient(90deg, rgba(144,194,213,1) 0%, rgba(149,160,217,1) 50%, rgba(195,157,222,1) 100%);
+}
+
+.description_wrap {
+  position: fixed;
+  top: 32px;
+  left: 32px;
+  width: 500px;
+  padding: 32px;
+  border: 4px solid #90C2D5;
+  border-image: var(--gradation);
+  border-image-slice: 1;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 16px;
+  color: #90C2D5;
+}
+
+.description {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: #90C2D5;
+}
+
+.japan {
+  width: 1000px;
+  height: 1000px;
+}
+
+.prefectures {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 1000px;
+  position: relative;
+  list-style: none;
+}
+
+.prefecture {
+  position: absolute;
+  cursor: default;
+}
+
+.prefecture:hover {
+  font-weight: 700;
+}
+
+.prefecture:hover::before {
+  content: attr(title);
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: var(--gradation);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 4px;
+  width: max-content;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.copyright_link {
+  color: #C39DDE;
+}
